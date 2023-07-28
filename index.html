@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculadora</title>
+  </head>
+  <link rel="stylesheet" href="css/styles.css">
+  <body>
+
+<form name="Calculadora">
+  <table border="3">
+
+    <tr>
+      <td colspan="5">
+        <input type="text" name="txtnros" value="0" disabled>
+      </td>
+    </tr>
+
+    <tr>
+        <td><input type="button" value="1" onclick="ingresarNumero(this.value)"></td>
+        <td><input type="button" value="2" onclick="ingresarNumero(this.value)"></td>
+        <td><input type="button" value="3" onclick="ingresarNumero(this.value)"></td>
+        <td><input type="button" value="+" onclick="ingresarOperacion(this.value)"></td>
+        <td><input type="button" value="-" onclick="ingresarOperacion(this.value)"></td>
+    </tr>
+
+    <tr>
+      <td><input type="button" value="4" onclick="ingresarNumero(this.value)"></td>
+      <td><input type="button" value="5" onclick="ingresarNumero(this.value)"></td>
+      <td><input type="button" value="6" onclick="ingresarNumero(this.value)"></td>
+      <td><input type="button" value="*" onclick="ingresarOperacion(this.value)"></td>
+      <td><input type="button" value=">" onclick="ingresarOperacion(this.value)"></td>
+  </tr>
+
+  <tr>
+    <td><input type="button" value="7" onclick="ingresarNumero(this.value)"></td>
+    <td><input type="button" value="8" onclick="ingresarNumero(this.value)"></td>
+    <td><input type="button" value="9" onclick="ingresarNumero(this.value)"></td>
+    <td><input type="button" value="^" onclick="ingresarOperacion('**')"></td>
+    <td><input type="button" value="√" onclick="raiz();"></td>
+</tr>
+
+<tr>
+  <td><input type="button" value="0" onclick="ingresarNumero(this.value)"></td>
+  <td><input type="button" value="." onclick="ingresarNumero(this.value)"></td>
+  <td><input type="button" value="C" onclick="limpiar();"></td>
+  <td colspan="2"><input type="button" value="=" onclick="resultado();"></td>
+</tr>
+
+  </table>
+</form>
+
+
+
+    <script src="js/funciones.js"></script>
+  </body>
+</html>
