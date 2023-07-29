@@ -6,29 +6,28 @@ let operacionPendiente = "";
 let solucion = "";
 
 function ingresarNumero(x) {
-    if (x !== ".") {
-      if (numPantalla == "0" || pantallaConN == "si") {
-        document.Calculadora.txtnros.value = x;
-        numPantalla = x;
-      } else if (x != ".") {
-        document.Calculadora.txtnros.value += x;
-        numPantalla += x;
-      }
-    }
-    if (x == "." && usarPunto == "no" && numPantalla == "0") {
-      document.Calculadora.txtnros.value = "0.";
+  if (x !== ".") {
+    if (numPantalla == "0" || pantallaConN == "si") {
+      document.Calculadora.txtnros.value = x;
       numPantalla = x;
-      usarPunto = "si";
-    } else if (x == "." && usarPunto == "no") {
-      document.Calculadora.txtnros.value +=x;
+    } else if (x != ".") {
+      document.Calculadora.txtnros.value += x;
       numPantalla += x;
-      usarPunto = "si";
-    } else if (x == "." && usarPunto == "si") {
     }
-    pantallaConN = "no";
   }
+  if (x == "." && usarPunto == "no" && numPantalla == "0") {
+    document.Calculadora.txtnros.value = "0.";
+    numPantalla = x;
+    usarPunto = "si";
+  } else if (x == "." && usarPunto == "no") {
+    document.Calculadora.txtnros.value += x;
+    numPantalla += x;
+    usarPunto = "si";
+  } else if (x == "." && usarPunto == "si") {
+  }
+  pantallaConN = "no";
+}
   
-      if (x !== ".") {
   function ingresarOperacion (y) {
     if (operacionPendiente == "") {
       numEspera=document.Calculadora.txtnros.value;
@@ -40,15 +39,7 @@ function ingresarNumero(x) {
     }
   }
   
-          if (numPantalla == "0" || pantallaConN == "si") {
-              document.Calculadora.txtnros.value = x;
-              numPantalla = x;
-          }
-          else if (x != ".") {
-              document.Calculadora.txtnros.value += x;
-              numPantalla += x;
-          }
-      }
+  
   function resultado(){
   if(operacionPendiente != ""){
     solucion = numEspera+operacionPendiente+numPantalla;
